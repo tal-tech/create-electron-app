@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "sourceMap": false,
+    "declaration": false,
+    "outDir": "./dist",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "removeComments": false,
+    "importHelpers": true,
+    "strict": true,
+    "lib": ["ES6"]
+  },
+  "include": ["src"]
+}

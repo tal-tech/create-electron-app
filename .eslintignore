@@ -1,0 +1,23 @@
+# Logs
+logs
+*.log
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# node-waf configuration
+.lock-wscript
+
+# OSX
+.DS_Store
+
+.idea
+npm-debug.log.*
+__snapshots__
+
+# .d.ts
+/**/*.d.ts
+
+dist
+commitlint.config.js
+.eslintrc.js
