@@ -1,6 +1,6 @@
 # @xhbzero/cli
 
-用于创建https://github.com/tal-tech/create-electron-app-template的cli项目
+用于创建[https://github.com/tal-tech/create-electron-app-template](https://github.com/tal-tech/create-electron-app-template)的cli项目
 
 ## 安装
 
