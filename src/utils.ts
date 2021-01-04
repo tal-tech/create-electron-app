@@ -1,4 +1,5 @@
 import fs from 'fs'
+import fsExtra from 'fs-extra'
 import { spawnSync } from 'child_process'
 import updateNotifier from 'update-notifier'
 import inquirer from 'inquirer'
@@ -65,7 +66,7 @@ export const run = ({
  */
 const downloadTemplate = (
   name: string,
-  template = 'git@github.com:tal-tech/create-electron-app-template.git'
+  template = 'https://github.com/tal-tech/create-electron-app-template.git'
 ): void => {
   const isGitTemplate = /\.git/.test(template)
   const currentPath = process.cwd()
@@ -93,11 +94,12 @@ const downloadTemplate = (
   console.log('\n下载模版...')
   run({
     ...runParams,
-    isStdio: false
+    isStdio: true
   })
   console.log('模板下载完成。\n')
 
   // 移除现有 git 记录
+  fsExtra.removeSync(`${currentPath}/${name}/.git`)
   run({ cmd: 'rm', args: ['-rf', '.git'], cwd: `${currentPath}/${name}` })
 }
 
